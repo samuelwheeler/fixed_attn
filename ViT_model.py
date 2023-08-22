@@ -129,7 +129,7 @@ class ViT(nn.Module):
             
         self.atn_type = attention_type
 
-    def forward(self, img, mode, set_weights):
+    def forward(self, img, mode = 'standard', set_weights = False):
         x = self.to_patch_embedding(img)
         b, n, _ = x.shape
 
